@@ -1,0 +1,146 @@
+/* Variables */
+$base-color: #777;
+$light-base-color: #ccc;
+$lightest-base-color: #efefef;
+$primary-color: #21003a;
+
+$basic-font: 'Helvetica', Arial, sans-serif;
+
+/* Global & Resets */
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body,
+ul,
+p {
+  margin:0;
+  padding:0;
+}
+
+body {
+  background-color: $lightest-base-color;
+  font-size:0.9em;
+  line-height:1.4em;
+  letter-spacing:0.04em;
+  color: $base-color;
+  font-family:$basic-font;
+}
+
+a {
+  color: $light-base-color;
+  text-decoration:none;
+  &:hover {
+    color:$light-base-color;
+  }
+}
+
+ul {
+  list-style:none;
+}
+
+img {
+  max-width:100%;
+}
+
+/* Headers & Headings */
+header {
+  margin:0 auto;
+  h1 img {
+    margin:0 auto;
+    display:block;
+  }
+}
+
+h2 {
+  font-size:1.6em;
+  line-height:1.2em;
+  font-weight:300;
+  text-align:center;
+}
+
+h3 {
+  font-size:0.9em;
+  text-align:center;
+  text-transform:uppercase;
+  letter-spacing:0.1em;
+  color:$primary-color;
+}
+
+nav {
+  width:100%;
+  text-align:center;
+  li {
+    display:inline;
+    padding:0 5px;
+    letter-spacing:0.1em;
+    font-size:0.9em;
+    text-transform:uppercase;
+  }
+}
+
+main {
+  padding: 0 10%;
+  section {
+    border-bottom:1px solid $primary-color;
+    padding:2% 0;
+  }
+  &:last-child {
+    border:none;
+  }
+}
+
+.title {
+  font-weight:bold;
+}
+
+.small-em {
+  font-size:0.9em;
+  padding-bottom:10px;
+  display:block;
+}
+
+.bull {
+  list-style:disc;
+  list-style-position:inside;
+}
+
+.center {
+  text-align:center;
+  float:none;
+  display:block;
+  margin:0 auto;
+}
+
+/* Grid-ish Items */
+
+.wrapper:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.col-two-thirds,
+.col-one-half,
+.col-one-third{
+  width:100%;
+  display:inline-block;
+  float:left;
+}
+
+@media only screen and (min-width:768px) {
+  .col-two-thirds {
+    width:66.66%;
+  }
+
+  .col-one-half {
+    width:50%;
+  }
+
+  .col-one-third {
+    width:33.33%;
+  }
+}
