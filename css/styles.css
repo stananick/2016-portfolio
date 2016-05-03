@@ -62,12 +62,12 @@ nav {
     font-size: 0.9em;
     text-transform: uppercase; }
 
-main {
+.wrap {
   padding: 0 10%; }
-  main section {
+  .wrap section {
     border-bottom: 1px solid #21003a;
     padding: 2% 0; }
-  main:last-child {
+  .wrap:last-child {
     border: none; }
 
 .title {
@@ -88,6 +88,31 @@ main {
   display: block;
   margin: 0 auto; }
 
+/* Specifics */
+#overview {
+  background: url(https://static.pexels.com/photos/51171/pexels-photo-51171.jpeg) #fff no-repeat center center;
+  background-size: 100% cover;
+  min-height: 500px;
+  padding: 50px 0; }
+  #overview h2 {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000;
+    padding: 30px 0; }
+
+.overlay {
+  display: none;
+  position: absolute;
+  height: 15%;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 11;
+  background-color: rgba(0, 0, 0, 0.8); }
+  .overlay p {
+    color: #efefef;
+    padding: 3% 2% 1% 2%; }
+
 /* Grid-ish Items */
 .wrapper:after {
   content: "";
@@ -99,7 +124,8 @@ main {
 .col-one-third {
   width: 100%;
   display: inline-block;
-  float: left; }
+  float: left;
+  position: relative; }
 
 @media only screen and (min-width: 768px) {
   .col-two-thirds {
