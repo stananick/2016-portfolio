@@ -54,22 +54,27 @@ header {
   h1 img {
     margin:0 auto;
     display:block;
+    max-width:250px;
   }
 }
 
 h2 {
-  font-size:1.6em;
-  line-height:1.2em;
+  font-size:1.8em;
+  line-height:1.4em;
   font-weight:300;
   text-align:center;
 }
 
 h3 {
-  font-size:0.9em;
+  font-size:1.6em;
   text-align:center;
   text-transform:uppercase;
   letter-spacing:0.1em;
   color:$primary-color;
+  font-weight:400;
+  padding:40px 0;
+  margin:0;
+  clear:both;
 }
 
 nav {
@@ -81,11 +86,19 @@ nav {
     letter-spacing:0.1em;
     font-size:0.9em;
     text-transform:uppercase;
+    a {
+      color:$primary-color;
+      &:hover {
+        color:$primary-color;
+      }
+    }
   }
 }
 
 .wrap {
   padding: 0 10%;
+  max-width:1600px;
+  margin:0 auto;
   section {
     border-bottom:1px solid $primary-color;
     padding:2% 0;
@@ -118,35 +131,106 @@ nav {
 }
 
 /* Specifics */
-#overview {
-  background: url(https://static.pexels.com/photos/51171/pexels-photo-51171.jpeg) #fff no-repeat center center;
-  background-size:100% cover;
+header {
+  background: url(https://static.pexels.com/photos/7919/pexels-photo.jpg) #fff no-repeat top center fixed;
   min-height:500px;
-  padding:50px 0;
+  padding:10px 0;
   h2 {
-    background-color:rgba(255,255,255,0.8);
-    color:#000;
+    color:$primary-color;
     padding:30px 0;
+  }
+  #overview {
+    max-width:50%;
+    margin:30px auto;
+    display:block;
   }
 }
 
+#portfolio .col-one-third {
+  margin-bottom:-5px;
+}
+
 .overlay {
-  display:none;
+  display:block;
   position:absolute;
   height:15%;
   width:100%;
   left:0;
   right:0;
-  bottom:0;
+  bottom:5px;
   z-index:11;
   background-color:rgba(0,0,0,0.8);
   p {
     color:$lightest-base-color;
-    padding:3% 2% 1% 2%;
+    padding:2% 2% 1% 2%;
+    text-transform:uppercase;
+    font-size:0.9em;
+    letter-spacing:0.1em;
+    span {
+      font-size:0.7em;
+    }
   }
 }
 
-/* Grid-ish Items */
+/* Skillbars */
+.skills {
+    list-style: none;
+    padding-top: 30px;
+}
+
+.skills li {
+    margin-bottom: 30px;
+    background: $primary-color;
+    height: 15px;
+    position:relative;
+    width:90%;
+}
+
+.skills li strong{
+    position: relative;
+    top: -20px;
+}
+
+.skills span {
+    height: 15px;
+    background: $secondary-color;
+    position: absolute;
+}
+
+.html5, .css3, .sass, .js, .angjs, .bootstrap, .adobe, .responsive, .ux, .wp, .other, .email {
+  -moz-animation: skillbar 2s ease-out;
+  -webkit-animation: skillbar 2s ease-out;
+}
+
+.html5 {width: 90%;}
+.css3 {width: 90%;}
+.sass {width: 80%;}
+.js {width: 75%;}
+.angjs {width: 40%;}
+.bootstrap {width: 80%;}
+.adobe {width: 90%;}
+.responsive {width: 90%;}
+.ux {width: 75%;}
+.wp {width: 65%;}
+.other {width: 80%;}
+.email {width: 70%;}
+
+@-moz-keyframes skillbar,
+@-webkit-keyframes skillbar {
+    0% {
+        width: 0px;
+    }
+    100% {
+        width: 100%;
+    };
+}
+
+.exp-item {
+  margin:20px 0;
+}
+
+
+/* Grid-ish Items & Media Queries*/
 
 .wrapper:after {
   content: "";
@@ -174,5 +258,11 @@ nav {
 
   .col-one-third {
     width:33.33%;
+  }
+}
+
+@media only screen and (min-width:1025px) {
+  .overlay {
+    display:none;
   }
 }
