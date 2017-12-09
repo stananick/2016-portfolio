@@ -1,0 +1,31 @@
+# Use PHP54 Single php.ini as default
+
+
+RewriteEngine On
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://www.lindseystanek.com/$1 [R,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+Redirect 301 /index.php http://www.lindseystanek.com/index
+Redirect 301 /about.php http://www.lindseystanek.com/index#about
+Redirect 301 /portfolio.php http://www.lindseystanek.com/index#work
+Redirect 301 /resume.php http://www.lindseystanek.com/index#skills
+Redirect 301 /contact.php http://www.lindseystanek.com/index#contact
+Redirect 301 /webz/loftson5th/index.php http://www.lindseystanek.com/index#work
+Redirect 301 /webz/atomic_ink/index.php http://www.lindseystanek.com/index#work
+Redirect 301 /webz/villa_italia/index.php http://www.lindseystanek.com/index#work
+Redirect 301 /sarah/index.html http://www.lindseystanek.com/index#work
+Redirect 301 /getgo-rd.php http://www.lindseystanek.com/index#work
+Redirect 301 /sarah-portfolio.php http://www.lindseystanek.com/index#work
+Redirect 301 /lofts.php http://www.lindseystanek.com/index#work
+Redirect 301 /danhaas.php http://www.lindseystanek.com/index#work
+Redirect 301 /windowfactory.php http://www.lindseystanek.com/index#work
+Redirect 301 /flare.php http://www.lindseystanek.com/index#work
+Redirect 301 /hidden-paradise.php http://www.lindseystanek.com/index#work
+Redirect 301 /emma.php http://www.lindseystanek.com/index#work
+Redirect 301 /drinkagram.php http://www.lindseystanek.com/index#work
+Redirect 301 /type-scars.php http://www.lindseystanek.com/index#work
+Redirect 301 /type-seize.php http://www.lindseystanek.com/index#work
+Redirect 301 /musicbook.php http://www.lindseystanek.com/index#work

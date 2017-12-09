@@ -32,6 +32,10 @@ body {
   font-family:$basic-font;
 }
 
+main {
+  margin-bottom:40px;
+}
+
 a {
   color: $light-base-color;
   text-decoration:none;
@@ -59,7 +63,7 @@ header {
 }
 
 h2 {
-  font-size:1.8em;
+  font-size:1.2em;
   line-height:1.4em;
   font-weight:300;
   text-align:center;
@@ -81,10 +85,10 @@ nav {
   width:100%;
   text-align:center;
   li {
-    display:inline;
-    padding:0 5px;
+    display:inline-block;
+    padding:5px;
     letter-spacing:0.1em;
-    font-size:0.9em;
+    font-size:1em;
     text-transform:uppercase;
     a {
       color:$primary-color;
@@ -120,7 +124,7 @@ nav {
 
 .bull {
   list-style:disc;
-  list-style-position:inside;
+  margin-left:30px;
 }
 
 .center {
@@ -132,7 +136,7 @@ nav {
 
 /* Specifics */
 header {
-  background: url(https://static.pexels.com/photos/7919/pexels-photo.jpg) #fff no-repeat top center fixed;
+  background: url(../img/portfolio-bgd-img.jpg) #fff no-repeat top center fixed;
   min-height:500px;
   padding:10px 0;
   h2 {
@@ -140,25 +144,27 @@ header {
     padding:30px 0;
   }
   #overview {
-    max-width:50%;
     margin:30px auto;
     display:block;
   }
 }
 
-#portfolio .col-one-third {
-  margin-bottom:-5px;
+#portfolio {
+  overflow:hidden;
+  .col-one-third {
+    margin-bottom:10px;
+  }
 }
 
 .overlay {
   display:block;
   position:absolute;
-  height:15%;
   width:100%;
   left:0;
   right:0;
   bottom:5px;
   z-index:11;
+  padding:0 10px;
   background-color:rgba(0,0,0,0.8);
   p {
     color:$lightest-base-color;
@@ -175,7 +181,7 @@ header {
 /* Skillbars */
 .skills {
     list-style: none;
-    padding-top: 30px;
+    //padding-top: 30px;
 }
 
 .skills li {
@@ -183,7 +189,8 @@ header {
     background: $primary-color;
     height: 15px;
     position:relative;
-    width:90%;
+    //width:90%;
+    width:100%;
 }
 
 .skills li strong{
@@ -202,12 +209,12 @@ header {
   -webkit-animation: skillbar 2s ease-out;
 }
 
-.html5 {width: 90%;}
-.css3 {width: 90%;}
-.sass {width: 80%;}
-.js {width: 75%;}
-.angjs {width: 40%;}
-.bootstrap {width: 80%;}
+.html5 {width: 95%;}
+.css3 {width: 95%;}
+.sass {width: 90%;}
+.js {width: 85%;}
+.angjs {width: 70%;}
+.bootstrap {width: 90%;}
 .adobe {width: 90%;}
 .responsive {width: 90%;}
 .ux {width: 75%;}
@@ -229,6 +236,88 @@ header {
   margin:20px 0;
 }
 
+/* Form styling */
+form {
+  display:block;
+  label {
+    color: $base-color;
+    display: block;
+    font-size:0.8em;
+    text-transform:uppercase;
+    width:100%;
+    margin-top:10px;
+  }
+}
+
+.success {
+  color:#53a306;
+}
+.error {
+  color:#f00;
+}
+
+input, textarea {
+  padding: 10px;
+  border: solid 1px $base-color;
+  outline: 0;
+  background: #fff;
+  width:100%;
+  display:block;
+}
+
+input:hover,
+textarea:hover {
+  border-color: $light-base-color;
+}
+
+button {
+    width: 100%;
+    padding: 9px 20px;
+    background: $primary-color;
+    border: 0;
+    font-size: 14px;
+    color: #fff;
+    display:block;
+    cursor: pointer;
+    margin-top:20px;
+    transition: background-color 0.2s ease-in-out;
+  &:hover {
+    background-color: $secondary-color;
+  }
+}
+
+input {
+    box-shadow: rgba(0,0,0, 0.1) 0px 0px 4px;
+    -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 4px;
+    -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 4px;
+}
+
+.info-block {
+  margin-top:20px;
+}
+
+.info-block {
+  a {
+    color:$primary-color;
+    display:block;
+  }
+  .social {
+    display:inline-block;
+    padding:0 3px;
+    img {
+      max-width:30px;
+    }
+  }
+}
+
+#contact {
+  span {
+    color:#53a306;
+  }
+  .small-em {
+    margin-top:10px;
+  }
+}
 
 /* Grid-ish Items & Media Queries*/
 
@@ -259,10 +348,51 @@ header {
   .col-one-third {
     width:33.33%;
   }
+
+  header {
+    min-height:400px;
+  }
+
+  h2 {
+    font-size:1.8em;
+  }
+
+  #about {
+    .col-two-thirds {
+      width:100%;
+    }
+    p {
+      padding:5px 0;
+    }
+  }
+
+  .skills li {
+    width:90%;
+  }
+
+  #portfolio {
+    .col-one-third {
+      margin-bottom:-5px;
+      width:50%;
+    }
+  }
+  form,
+  #form-messages {
+    width:90%;
+  }
 }
 
 @media only screen and (min-width:1025px) {
   .overlay {
     display:none;
+  }
+  #portfolio {
+    .col-one-third {
+      margin-bottom:-5px;
+      width:33.33%;
+    }
+  }
+  #contact {
+    max-width:1200px;
   }
 }

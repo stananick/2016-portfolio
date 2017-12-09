@@ -1,0 +1,24 @@
+# Use PHP54 Single php.ini as default
+AddHandler application/x-httpd-php54s .php
+
+Redirect 301 /index.php http://www.lindseystanek.com/index
+Redirect 301 /about.php http://www.lindseystanek.com/index#about
+Redirect 301 /portfolio.php http://www.lindseystanek.com/index#work
+Redirect 301 /resume.php http://www.lindseystanek.com/index#skills
+Redirect 301 /contact.php http://www.lindseystanek.com/index#contact
+Redirect 301 /webz/loftson5th/index.php http://www.lindseystanek.com/index#work
+Redirect 301 /webz/atomic_ink/index.php http://www.lindseystanek.com/index#work
+Redirect 301 /webz/villa_italia/index.php http://www.lindseystanek.com/index#work
+Redirect 301 /sarah/index.html http://www.lindseystanek.com/index#work
+Redirect 301 /getgo-rd.php http://www.lindseystanek.com/index#work
+Redirect 301 /sarah-portfolio.php http://www.lindseystanek.com/index#work
+Redirect 301 /lofts.php http://www.lindseystanek.com/index#work
+Redirect 301 /danhaas.php http://www.lindseystanek.com/index#work
+Redirect 301 /windowfactory.php http://www.lindseystanek.com/index#work
+Redirect 301 /flare.php http://www.lindseystanek.com/index#work
+Redirect 301 /hidden-paradise.php http://www.lindseystanek.com/index#work
+Redirect 301 /emma.php http://www.lindseystanek.com/index#work
+Redirect 301 /drinkagram.php http://www.lindseystanek.com/index#work
+Redirect 301 /type-scars.php http://www.lindseystanek.com/index#work
+Redirect 301 /type-seize.php http://www.lindseystanek.com/index#work
+Redirect 301 /musicbook.php http://www.lindseystanek.com/index#work
