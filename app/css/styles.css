@@ -14,14 +14,18 @@ p {
   padding: 0; }
 
 body {
-  background: url(../img/portfolio-bgd-img.jpg) #fff no-repeat top center;
-  background-size: cover;
-  background-attachment: fixed;
+  background: #cec8e0;
+  background: linear-gradient(180deg, #cec8e0 0%, #9d98ac 100%);
   font-size: 1rem;
   line-height: 1.2rem;
   letter-spacing: 0.04rem;
   color: #333;
   font-family: "Helvetica", Arial, sans-serif; }
+  @media only screen and (min-width: 768px) {
+    body {
+      background: url(../img/portfolio-bgd-img.jpg) #fff no-repeat top center;
+      background-size: cover;
+      background-attachment: fixed; } }
 
 a {
   color: #ccc; }
@@ -86,11 +90,11 @@ h3 {
 .info-section {
   padding: 1rem;
   max-width: 800px;
-  margin: 0 auto;
-  background-color: rgba(255, 255, 255, 0.6); }
+  margin: 0 auto; }
   @media only screen and (min-width: 768px) {
     .info-section {
-      padding: 1rem 2rem; } }
+      padding: 1rem 2rem;
+      background-color: rgba(255, 255, 255, 0.6); } }
   .info-section:last-child {
     border: none; }
 
@@ -167,7 +171,9 @@ h3 {
     display: block; }
   .contact-info__social {
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    margin-top: 1rem; }
     .contact-info__social img {
       max-width: 30px; }
     .contact-info__social a {

@@ -24,14 +24,19 @@ p {
 }
 
 body {
-  background: url(../img/portfolio-bgd-img.jpg) #fff no-repeat top center;
-  background-size: cover;
-  background-attachment: fixed;
+  background: #cec8e0;
+  background: linear-gradient(180deg, #cec8e0 0%, #9d98ac 100%);
   font-size: 1rem;
   line-height: 1.2rem;
   letter-spacing: 0.04rem;
   color: $dark-base-color;
   font-family: $basic-font;
+
+  @media only screen and (min-width: 768px) {
+    background: url(../img/portfolio-bgd-img.jpg) #fff no-repeat top center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
 }
 
 a {
@@ -116,10 +121,10 @@ h3 {
   padding: 1rem;
   max-width: 800px;
   margin: 0 auto;
-  background-color: rgba(255, 255, 255, 0.6);
-
+  
   @media only screen and (min-width: 768px) {
     padding: 1rem 2rem;
+    background-color: rgba(255, 255, 255, 0.6);
   }
 
   &:last-child {
@@ -229,6 +234,8 @@ h3 {
   &__social {
     display: flex;
     justify-content: center;
+    background-color: rgba(255,255,255,0.7);
+    margin-top: 1rem;
 
     img {
       max-width: 30px;
