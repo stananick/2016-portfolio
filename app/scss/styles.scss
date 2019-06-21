@@ -68,6 +68,12 @@ img {
     font-weight: 300;
     max-width: 800px;
     margin: 0 auto;
+
+    @media only screen and (min-width: 768px) {
+      font-size: 1.8rem;
+      line-height: 2rem;
+      padding: 3rem 0;
+    }
   }
 }
 
@@ -112,15 +118,21 @@ h3 {
   margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.6);
 
+  @media only screen and (min-width: 768px) {
+    padding: 1rem 2rem;
+  }
+
   &:last-child {
     border: none;
   }
 }
 
 .skills-tools {
-  &__wrapper {
-    display: flex;
-    justify-content: space-evenly;
+  @media only screen and (min-width: 768px) {
+    &__wrapper {
+      display: flex;
+      justify-content: space-evenly;
+    }
   }
 
   &__list {

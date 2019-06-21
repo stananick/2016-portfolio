@@ -50,6 +50,11 @@ img {
     font-weight: 300;
     max-width: 800px;
     margin: 0 auto; }
+    @media only screen and (min-width: 768px) {
+      .header__overview {
+        font-size: 1.8rem;
+        line-height: 2rem;
+        padding: 3rem 0; } }
 
 h3 {
   font-size: 1.4rem;
@@ -83,12 +88,16 @@ h3 {
   max-width: 800px;
   margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.6); }
+  @media only screen and (min-width: 768px) {
+    .info-section {
+      padding: 1rem 2rem; } }
   .info-section:last-child {
     border: none; }
 
-.skills-tools__wrapper {
-  display: flex;
-  justify-content: space-evenly; }
+@media only screen and (min-width: 768px) {
+  .skills-tools__wrapper {
+    display: flex;
+    justify-content: space-evenly; } }
 
 .skills-tools__list {
   list-style: disc;
